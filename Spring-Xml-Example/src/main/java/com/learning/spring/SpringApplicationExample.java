@@ -8,9 +8,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  */
 public class SpringApplicationExample {
-	
+
 	public static void main(String[] args) {
-		
-		 ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		MessagePrinter printer = context.getBean(MessagePrinter.class);
+		printer.getMessage();
+
+		System.out.println("Hello World!" + printer.getMessage());
+		System.out.println("Application Context : " +context.getId());
+
 	}
 }

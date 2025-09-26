@@ -5,10 +5,7 @@
            http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="messageService" class="com.learning.spring.MessageService" />
+   <bean id="messagePrinter" class="com.learning.spring.MessagePrinter" />
 
-    <bean id="messagePrinter" class="com.learning.spring.MessagePrinter">
-        <property name="service" ref="messageService" />
-    </bean>
 
 </beans>
